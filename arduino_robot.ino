@@ -5,6 +5,7 @@
 #include "motor_control.h"
 #include "sonar_publisher.h"
 #include "button_publisher.h"
+#include "obstacle_avoidance.h"
 
 ros::NodeHandle nh;
 
@@ -19,6 +20,7 @@ void setup() {
     setup_motors(nh);
     setup_sonar(nh);
     setup_button(nh);
+    setup_obstacle_avoidance(nh);
 
     nh.loginfo("Arduino Robot node is now set up.");
 }

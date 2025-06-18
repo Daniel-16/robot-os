@@ -47,7 +47,7 @@ void cmdVelCallback(const geometry_msgs::Twist& twist_msg) {
   drive(left_pwm, right_pwm);
 }
 
-ros::Subscriber<geometry_msgs::Twist> cmd_vel_sub("cmd_vel", &cmdVelCallback);
+ros::Subscriber<geometry_msgs::Twist> cmd_vel_sub("safe_cmd_vel", &cmdVelCallback);
 
 void setup_motors(ros::NodeHandle &nh) {
   pinMode(ENA, OUTPUT);
